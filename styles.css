@@ -1,0 +1,710 @@
+/*========== Font and typography ==========*/
+
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url(Fonts/HelveticaNeue.woff2) format("woff2"),
+    url(Fonts/HelveticaNeue.woff) format("woff"),
+    url(Fonts/HelveticaNeue.ttf) format("truetype");
+
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url(Fonts/HelveticaNeue-Medium.woff2) format("woff2"),
+    url(Fonts/HelveticaNeue-Medium.woff) format("woff"),
+    url(Fonts/HelveticaNeue-Medium.ttf) format("truetype");
+
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url(Fonts/HelveticaNeue-Bold.woff2) format("woff2"),
+    url(Fonts/HelveticaNeue-Bold.woff) format("woff"),
+    url(Fonts/HelveticaNeue-Bold.ttf) format("truetype");
+
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+:root {
+  --body-font: "HelveticaNeue", sans-serif;
+
+  /*========== Colors ==========*/
+
+  --white: #ffffff;
+  --white-two: #d8d8d8;
+  --white-three: #f3f4f8;
+  --dark: #1e2335;
+  --dark-two: #2b3049;
+  --dark-grey: #787878;
+  --sickly-yellow: #cbe346;
+
+  /*========== Font and typography sizes ==========*/
+
+  --big-font-size: 3.313rem;
+  --h1-font-size: 3.125rem;
+  --normal-font-size: 1.125rem;
+  --small-font-size: 1rem;
+  --smaller-font-size: 0.938rem;
+  --tiny-font-size: 0.813rem;
+
+  /*========== Font weight ==========*/
+
+  --font-extra-light: 200;
+  --font-light: 300;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-bold: bold;
+
+  /*========== Font lineHeight ==========*/
+
+  --normal-line-height: normal;
+  --bigger-line-height: 68px;
+  --big-line-height: 64px;
+  --medium-line-height: 57px;
+  --small-line-height: 30px;
+  --tiny-line-height: 28px;
+
+  /*========== Font letterSpacing ==========*/
+
+  --normal-letter-spacing: normal;
+  --bigger-letter-spacing: 1.87px;
+  --big-letter-spacing: 1.14px;
+  --medium-letter-spacing: 1.01px;
+  --small-letter-spacing: 0.51px;
+  --tiny-letter-spacing: -0.06px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  text-decoration: inherit;
+  text-transform: inherit;
+  color: inherit;
+  list-style: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+body {
+  color: var(--white);
+  list-style: none;
+  font-family: var(--body-font);
+  text-decoration: none;
+  text-transform: none;
+  line-height: normal;
+  background-color: var(--white);
+}
+
+main {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* General Start*/
+
+.wide-container {
+  width: 80%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slim-container {
+  width: 60%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.font-weight-medium {
+  font-weight: var(--font-medium);
+}
+
+.font-weight-bold {
+  font-weight: var(--font-bold);
+}
+
+.color-green {
+  color: var(--sickly-yellow);
+}
+
+.mr-2-25 {
+  margin-right: 2.25rem;
+}
+
+.mr-1-938 {
+  margin-right: 1.938rem;
+}
+
+.h1 {
+  font-size: var(--big-font-size);
+  line-height: var(--bigger-line-height);
+  letter-spacing: var(--tiny-letter-spacing);
+}
+
+.h2 {
+  font-size: var(--big-font-size);
+  line-height: var(--medium-line-height);
+  letter-spacing: var(--tiny-letter-spacing);
+  color: var(--dark);
+  margin-bottom: 1.2rem;
+}
+
+.h3 {
+  font-size: var(--h1-font-size);
+  line-height: var(--big-line-height);
+  letter-spacing: var(--tiny-letter-spacing);
+  color: var(--white);
+  margin-bottom: 0.6rem;
+}
+
+.slide-right {
+  transform: translateX(400%);
+  transition: transform 0.4s ease;
+}
+
+.slide-right.show {
+  transform: translate(0);
+}
+
+.slide-left {
+  transform: translateX(-400%);
+  transition: transform 0.4s ease;
+}
+
+.slide-left.show {
+  transform: translate(0);
+}
+
+/* General End */
+
+/* Hero Start */
+.hero-container {
+  position: relative;
+  background-image: url(img/group@2x.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  padding-bottom: 17.25rem;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+.hero-logo-container {
+  display: flex;
+  position: relative;
+}
+
+.hero-logo {
+  padding: 1.563rem;
+}
+
+.line {
+  width: 2px;
+  background-color: #ffffff;
+  top: 0;
+  right: 0;
+  position: absolute;
+  height: 830px;
+  z-index: 999;
+}
+
+.line-2 {
+  width: 17px;
+  height: 1px;
+  border: solid 1px var(--white);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.hero-content-container {
+  width: 100%;
+  padding-left: 4.188rem;
+  padding-right: 5.875rem;
+  padding-top: 2.75rem;
+}
+
+.navbar-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 9rem;
+}
+
+.nav-links {
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.nav-link {
+  margin-right: 4.25rem;
+  font-size: var(--small-font-size);
+  letter-spacing: var(--big-letter-spacing);
+}
+
+.nav-link-lan {
+  margin-right: 1.25rem;
+  font-size: var(--small-font-size);
+  letter-spacing: var(--big-letter-spacing);
+  transition: all 0.05s ease;
+}
+
+.nav-link-lan:hover {
+  font-weight: var(--font-bold);
+}
+
+.hero-text-content {
+  padding-top: 5rem;
+  margin-bottom: 3.375rem;
+}
+
+.btn-white {
+  font-size: var(--smaller-font-size);
+  font-weight: var(--font-bold);
+  letter-spacing: var(--medium-letter-spacing);
+  padding: 0.938rem 2.438rem;
+  background-color: transparent;
+  border-radius: 26.5px;
+  border: solid 1px var(--white);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.btn-white:hover {
+  background-color: var(--sickly-yellow);
+}
+
+.icon-arrow-w {
+  width: 23px;
+  height: 1px;
+  background-color: var(--white);
+  position: relative;
+  margin-left: 3px;
+}
+
+.icon-arrow-w::after {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 1px;
+  background-color: var(--white);
+  transform: rotate(45deg);
+  position: absolute;
+  right: -1px;
+  bottom: 2px;
+}
+
+.icon-arrow-w::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 1px;
+  background-color: var(--white);
+  transform: rotate(-45deg);
+  position: absolute;
+  right: -1px;
+  bottom: -2px;
+}
+
+@media only screen and (max-width: 934px) {
+  .line {
+    display: none;
+  }
+
+  .navbar-container {
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 5rem;
+  }
+
+  .nav-link {
+    margin-right: 0.5rem;
+    padding: 0rem 1rem;
+    border-right: solid 1px var(--white);
+    border-left: solid 1px var(--white);
+  }
+
+  .hero-container {
+    padding-bottom: 10.25rem;
+  }
+
+  .hero-logo-container {
+    display: block;
+  }
+
+  .hero-logo {
+    padding: 2rem 0rem 2rem 2rem;
+  }
+
+  .hero-content-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 2rem;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar-container {
+    margin-bottom: 1rem;
+  }
+
+  .nav-link {
+    margin-right: 0.5rem;
+    padding: 0rem 1rem;
+    border-top: solid 1px var(--white);
+    border-bottom: solid 1px var(--white);
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-container {
+    padding-bottom: 5.25rem;
+  }
+
+  .hero-logo-container {
+    display: block;
+  }
+
+  .hero-logo {
+    padding: 1rem 0rem 1rem 1rem;
+  }
+
+  .line-2 {
+    display: none;
+  }
+}
+/* Hero End */
+
+/* History Section Start */
+
+.history-section {
+  background-color: var(--white-three);
+  padding: 4.5rem 10.5rem 4.188rem 15.938rem;
+  margin-left: 3px;
+}
+
+.history-content-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.tennis-word {
+  font-size: var(--smaller-font-size);
+  letter-spacing: var(--bigger-letter-spacing);
+  color: var(--sickly-yellow);
+  font-weight: var(--font-medium);
+  margin-right: 3.188rem;
+  padding-top: 1rem;
+}
+
+.normal-text {
+  font-size: var(--normal-font-size);
+  line-height: var(--small-line-height);
+  letter-spacing: var(--small-letter-spacing);
+  color: var(--dark-grey);
+}
+
+.btn-black {
+  font-size: var(--smaller-font-size);
+  font-weight: var(--font-bold);
+  letter-spacing: var(--medium-letter-spacing);
+  padding: 0.938rem 2.438rem;
+  background-color: transparent;
+  border-radius: 26.5px;
+  border: solid 1px var(--dark-two);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: color 0.4s ease;
+  color: #273048;
+  max-width: 239px;
+  max-height: 53px;
+  align-self: flex-end;
+  transition: all 0.4s ease;
+}
+
+.btn-black:hover {
+  background-color: var(--sickly-yellow);
+}
+
+.icon-arrow-b {
+  width: 23px;
+  height: 1px;
+  background-color: var(--dark-two);
+  position: relative;
+  margin-left: 43px;
+  transition: all;
+}
+
+.icon-arrow-b::after {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 1px;
+  background-color: var(--dark-two);
+  transform: rotate(45deg);
+  position: absolute;
+  right: -1px;
+  bottom: 2px;
+}
+
+.icon-arrow-b::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 1px;
+  background-color: var(--dark-two);
+  transform: rotate(-45deg);
+  position: absolute;
+  right: -1px;
+  bottom: -2px;
+}
+
+@media only screen and (max-width: 990px) {
+  .history-section {
+    background-color: var(--white-three);
+    padding: 2rem 2.5rem;
+    margin-left: 0px;
+  }
+
+  .history-content-container {
+    display: block;
+  }
+
+  .normal-text {
+    margin-bottom: 3rem;
+  }
+
+  .tennis-word {
+    margin-bottom: 1rem;
+    margin-right: 0;
+    padding-top: 0;
+  }
+
+  .history-info {
+    width: 100%;
+  }
+}
+
+/* History Section End */
+
+/* Products Section Start */
+
+.products-section {
+  display: flex;
+  margin-left: 3px;
+}
+
+.our-products-container {
+  background-image: url(img/ball-color-court-1405355@3x.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 2.375rem 1.688rem 3.875rem 11.875rem;
+  min-width: 530px;
+}
+
+.our-products-info {
+  width: 100%;
+}
+
+.normal-text-white {
+  font-size: var(--normal-font-size);
+  line-height: var(--small-line-height);
+  letter-spacing: var(--small-letter-spacing);
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.dots-container {
+  display: flex;
+  margin-bottom: 2.2rem;
+}
+
+.dot {
+  width: 8px;
+  height: 7.8px;
+  margin-right: 1.5rem;
+  background-color: #ebebeb;
+  border-radius: 25px;
+}
+
+.dot-green {
+  width: 8px;
+  height: 7.8px;
+  margin-right: 1.5rem;
+  background-color: var(--sickly-yellow);
+  border-radius: 25px;
+}
+
+.nex-prev-btns-container {
+  display: flex;
+  margin-left: -20px;
+}
+
+.products-container {
+  display: flex;
+  justify-content: right;
+  width: 100%;
+  padding: 3.188rem 0rem 4.563rem 1.25rem;
+  position: relative;
+}
+
+.product-card {
+  position: relative;
+}
+
+.circle-card {
+  top: 11px;
+  left: 17px;
+  border-radius: 25px;
+  width: 2.438rem;
+  height: 2.438rem;
+  padding: 10px;
+  position: absolute;
+  background: var(--sickly-yellow);
+  color: var(--white);
+  text-align: center;
+  font-size: var(--small-font-size);
+  letter-spacing: var(--bigger-letter-spacing);
+}
+
+@media only screen and (max-width: 1100px) {
+  .products-section {
+    display: block;
+    margin-left: 0px;
+  }
+
+  .our-products-container {
+    width: 100%;
+    padding: 2rem;
+    background-position: center;
+    background-image: url(img/ball-color-court-flip1405355@3x.jpg);
+  }
+}
+/* Products Section End */
+
+/* Athlete Section Start */
+
+.athlete-hero {
+  background-image: url(img/action-athlete-ball-342361@3x.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 586px;
+}
+
+@media only screen and (max-width: 1100px) {
+  .athlete-hero {
+    height: 386px;
+  }
+}
+
+@media only screen and (max-width: 834px) {
+  .athlete-hero {
+    background-position: left;
+    height: 286px;
+  }
+}
+
+/* Athlete Section End */
+
+/* Footer Start */
+
+.footer-container {
+  background-color: var(--sickly-yellow);
+  padding: 4rem 3.938rem 3.625rem 4.875rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-navlinks {
+  margin-bottom: 1.25rem;
+}
+
+.footer-navlink {
+  color: var(--dark-two);
+  font-size: var(--small-font-size);
+  letter-spacing: var(--big-letter-spacing);
+  margin-right: 3rem;
+}
+
+.social-link {
+  margin-right: 6px;
+}
+
+@media only screen and (max-width: 834px) {
+  .footer-container {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .footer-nav-container {
+    text-align: center;
+  }
+
+  .footer-navlink {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .footer-navlinks {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-logo {
+    margin-bottom: 2rem;
+  }
+}
+
+/* Footer End */
+
+/* Font size for large devices */
+
+@media screen and (max-width: 950px) {
+  :root {
+    --big-font-size: 2.2rem;
+    --h1-font-size: 2rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.8rem;
+    --tiny-font-size: 0.7rem;
+  }
+}
